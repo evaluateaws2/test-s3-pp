@@ -11,7 +11,7 @@ phases:
       
   post_build:
     commands:
-      - echo "Copying files to destination 1
+      - echo "Copying files to destination 1"
       - echo "Source directory: ${CODEBUILD_SOURCE_DIR}"
       - echo "Artifact directory: ${CODEBUILD_ARTIFACTS_DIR}"
 artifacts:
