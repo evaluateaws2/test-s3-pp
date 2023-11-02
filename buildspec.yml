@@ -1,0 +1,15 @@
+version: 0.2
+
+phases:
+  pre_build:
+    commands:
+      - echo "Checking out code..."
+
+  build:
+    commands:
+      - echo "Copying files to S3..."
+      
+  post_build:
+    commands:
+      - echo "Copying files to destination..."
+      
