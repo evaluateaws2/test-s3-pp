@@ -1,19 +1,19 @@
 version: 0.2
 
 phases:
+  install:
+      - pip install boto3    
   pre_build:
     commands:
       - echo "Checking out code..."
-
   build:
     commands:
+      - python build_mapping.py
       - echo "Copying files to S3..."
       
   post_build:
     commands:
-      - echo "Copying files to destination 1"
-      - echo "Source directory: ${CODEBUILD_SOURCE_DIR}"
-      - echo "Artifact directory: ${CODEBUILD_ARTIFACTS_DIR}"
+      - echo "Copying files to destination 1"      
 artifacts:
     files:
       - '**/*'
