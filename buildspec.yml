@@ -10,6 +10,7 @@ phases:
       - echo "Checking out code..."
       - echo $CODEBUILD_SRC_DIR
       - mkdir $CODEBUILD_SRC_DIR/buildoutput
+      - echo dir $CODEBUILD_SRC_DIR/*      
   build:
     commands:
       - python build_mapping.py
