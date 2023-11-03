@@ -8,6 +8,8 @@ phases:
   pre_build:
     commands:
       - echo "Checking out code..."
+      - echo $CODEBUILD_SRC_DIR
+      - mkdir $CODEBUILD_SRC_DIR/buildoutput
   build:
     commands:
       - python build_mapping.py
